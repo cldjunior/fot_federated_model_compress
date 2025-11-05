@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  g01_gateway_compress:
+    build: .
+    image: cldjunior/fot_gateway:1.5
+    container_name: g01_compress
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.4
+    volumes:
+      - ./data_g01_compress:/data
+      - ./model_global:/model_global
+    entrypoint: ["bash", "start_gateway.sh"]
+    environment:
+      #- STRATEGY=fedavg    # Média simples (default)
+      #- STRATEGY=fedprox   # Penalização local
+      #- STRATEGY=fedadam   # Otimizador adaptativo
+      - STRATEGY=fedavg
+
+
+
+networks:
+  fot-net:
+    external: true

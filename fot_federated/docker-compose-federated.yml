@@ -1,0 +1,218 @@
+services:
+
+
+
+  dc01_compress:
+    image: cldjunior/fot_federated:1.5
+    container_name: dc01_compress
+    command: ["bash", "start_fl.sh", "dc01_compress"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.10
+    mem_limit: 2g
+    memswap_limit: 2.5g
+    cpus: 0.3
+
+  dc02_compress:
+    image: cldjunior/fot_federated:1.5
+    container_name: dc02_compress
+    command: ["bash", "start_fl.sh", "dc02_compress"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.11
+    mem_limit: 2g
+    memswap_limit: 2.5g
+    cpus: 0.3
+
+  dc03_compress:
+    image: cldjunior/fot_federated:1.5
+    container_name: dc03_compress
+    command: ["bash", "start_fl.sh", "dc03_compress"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.12
+    mem_limit: 2g
+    memswap_limit: 2.5g
+    cpus: 0.3
+
+  dc04_compress:
+    image: cldjunior/fot_federated:1.5
+    container_name: dc04_compress
+    command: ["bash", "start_fl.sh", "dc04_compress"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.13
+    mem_limit: 2g
+    memswap_limit: 2.5g
+    cpus: 0.3
+
+  dc05_compress:
+    image: cldjunior/fot_federated:1.5
+    container_name: dc05_compress
+    command: ["bash", "start_fl.sh", "dc05_compress"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.14
+    mem_limit: 2g
+    memswap_limit: 2.5g
+    cpus: 0.3
+
+  #dc06_compress:
+  #  image: cldjunior/fot_federated:1.5
+  #  container_name: dc06_compress
+  #  command: ["bash", "start_fl.sh", "dc06_compress"]
+  #  volumes:
+  #    - ./:/fot_federated
+  #  working_dir: /fot_federated
+  #  networks:
+  #    fot-net:
+  #      ipv4_address: 172.27.27.15
+  #  mem_limit: 2g
+  #  memswap_limit: 2.5g
+  #  cpus: 0.3
+
+  #dc07_compress:
+  # image: cldjunior/fot_federated:1.5
+  # container_name: dc07_compress
+  # command: ["bash", "start_fl.sh", "dc07_compress"]
+  # volumes:
+  #   - ./:/fot_federated
+  # working_dir: /fot_federated
+  # networks:
+  #   fot-net:
+  #     ipv4_address: 172.27.27.16
+  # mem_limit: 2g
+  # memswap_limit: 2.5g
+  # cpus: 0.3
+
+
+  #dc08_compress:
+  # image: cldjunior/fot_federated:1.5
+  # container_name: dc08_compress
+  # command: ["bash", "start_fl.sh", "dc08_compress"]
+  # volumes:
+  #   - ./:/fot_federated
+  # working_dir: /fot_federated
+  # networks:
+  #   fot-net:
+  #     ipv4_address: 172.27.27.17
+  # mem_limit: 2g
+  # memswap_limit: 2.5g
+  # cpus: 0.3
+    
+  #dc09_compress:
+  # image: cldjunior/fot_federated:1.5
+  # container_name: dc09_compress
+  # command: ["bash", "start_fl.sh", "dc09_compress"]
+  # volumes:
+  #   - ./:/fot_federated
+  # working_dir: /fot_federated
+  # networks:
+  #   fot-net:
+  #     ipv4_address: 172.27.27.18
+  # mem_limit: 2g
+  # memswap_limit: 2.5g
+  # cpus: 0.3    
+
+  #dc10_compress:
+  # image: cldjunior/fot_federated:1.5
+  # container_name: dc10_compress
+  # command: ["bash", "start_fl.sh", "dc10_compress"]
+  # volumes:
+  #   - ./:/fot_federated
+  # working_dir: /fot_federated
+  # networks:
+  #   fot-net:
+  #     ipv4_address: 172.27.27.19
+  # mem_limit: 2g
+  # memswap_limit: 2.5g
+  # cpus: 0.3    
+
+  #dc11_compress:
+  #  image: cldjunior/fot_federated:1.5
+  #  container_name: dc11_compress
+  #  command: ["bash", "start_fl.sh", "dc11_compress"]
+  #  volumes:
+  #    - ./:/fot_federated
+  #  working_dir: /fot_federated
+  #  networks:
+  #    fot-net:
+  #      ipv4_address: 172.27.27.20
+  #  mem_limit: 2g
+  #  memswap_limit: 2.5g
+  #  cpus: 0.3 
+
+  #dc12_compress:
+  #  image: cldjunior/fot_federated:1.5
+  #  container_name: dc12_compress
+  #  command: ["bash", "start_fl.sh", "dc12_compress"]
+  #  volumes:
+  #    - ./:/fot_federated
+  #  working_dir: /fot_federated
+  #  networks:
+  #    fot-net:
+  #      ipv4_address: 172.27.27.21
+  #  mem_limit: 2g
+  #  memswap_limit: 2.5g
+  #  cpus: 0.3 
+
+  #dc13_compress:
+  #  image: cldjunior/fot_federated:1.5
+  #  container_name: dc13_compress
+  #  command: ["bash", "start_fl.sh", "dc13_compress"]
+  #  volumes:
+  #    - ./:/fot_federated
+  #  working_dir: /fot_federated
+  #  networks:
+  #    fot-net:
+  #      ipv4_address: 172.27.27.22
+  #  mem_limit: 2g
+  #  memswap_limit: 2.5g
+  #  cpus: 0.3 
+    
+  #dc14_compress:
+  #  image: cldjunior/fot_federated:1.5
+  #  container_name: dc14_compress
+  #  command: ["bash", "start_fl.sh", "dc14_compress"]
+  #  volumes:
+  #    - ./:/fot_federated
+  #  working_dir: /fot_federated
+  #  networks:
+  #    fot-net:
+  #      ipv4_address: 172.27.27.23
+  #  mem_limit: 2g
+  #  memswap_limit: 2.5g
+  #  cpus: 0.3     
+  
+  #dc15_compress:
+  #  image: cldjunior/fot_federated:1.5
+  #  container_name: dc15_compress
+  #  command: ["bash", "start_fl.sh", "dc15_compress"]
+  #  volumes:
+  #    - ./:/fot_federated
+  #  working_dir: /fot_federated
+  #  networks:
+  #    fot-net:
+  #      ipv4_address: 172.27.27.24
+  #  mem_limit: 2g
+  #  memswap_limit: 2.5g
+  #  cpus: 0.3     
+networks:
+  fot-net:
+    external: true
+

@@ -1,0 +1,16 @@
+{"type": "sensor", "name": "h1", "name_iot": "sc01", "ip": "10.0.0.1", "state": "active", "location": {"lat": -12.999903872390929, "long": -38.50728049190718}}
+{"type": "sensor", "name": "h2", "name_iot": "sc02", "ip": "10.0.0.2", "state": "active", "location": {"lat": -12.99989190083449, "long": -38.50724832254857}}
+{"type": "sensor", "name": "h3", "name_iot": "sc03", "ip": "10.0.0.3", "state": "active", "location": {"lat": -12.999891757640798, "long": -38.507255230333925}}
+{"type": "sensor", "name": "h4", "name_iot": "sc04", "ip": "10.0.0.4", "state": "active", "location": {"lat": -12.999899179855152, "long": -38.50727730689321}}
+{"type": "sensor", "name": "h5", "name_iot": "sc05", "ip": "10.0.0.5", "state": "active", "location": {"lat": -12.999892979318894, "long": -38.50728550487296}}
+{"type": "sensor", "name": "h6", "name_iot": "sc06", "ip": "10.0.0.6", "state": "active", "location": {"lat": -12.999908155578762, "long": -38.507256050142146}}
+{"type": "sensor", "name": "h7", "name_iot": "sc07", "ip": "10.0.0.7", "state": "active", "location": {"lat": -12.999905149018351, "long": -38.507268579988505}}
+{"type": "sensor", "name": "h8", "name_iot": "sc08", "ip": "10.0.0.8", "state": "active", "location": {"lat": -12.999906936772145, "long": -38.50726088032069}}
+{"type": "sensor", "name": "h9", "name_iot": "sc09", "ip": "10.0.0.9", "state": "active", "location": {"lat": -12.99989641675041, "long": -38.50728759955397}}
+{"type": "sensor", "name": "h10", "name_iot": "sc10", "ip": "10.0.0.10", "state": "active", "location": {"lat": -12.999887045082643, "long": -38.50727740963489}}
+{"type": "sensor", "name": "h11", "name_iot": "sc11", "ip": "10.0.0.11", "state": "active", "location": {"lat": -12.999909883415336, "long": -38.50725017993426}}
+{"type": "sensor", "name": "h12", "name_iot": "sc12", "ip": "10.0.0.12", "state": "active", "location": {"lat": -12.999910525403429, "long": -38.507285110185855}}
+{"type": "sensor", "name": "h13", "name_iot": "sc13", "ip": "10.0.0.13", "state": "active", "location": {"lat": -12.999893906768325, "long": -38.50725236626413}}
+{"type": "sensor", "name": "h14", "name_iot": "sc14", "ip": "10.0.0.14", "state": "active", "location": {"lat": -12.999903803358574, "long": -38.50728645620887}}
+{"type": "gateway", "name": "h15", "name_iot": "g01", "ip": "172.27.27.4", "state": "active", "location": {"lat": -12.99991333030281, "long": -38.50725665798616}}
+{"type": "gateway", "name": "h16", "name_iot": "g03", "ip": "172.27.27.6", "state": "active", "location": {"lat": -12.999911905178594, "long": -38.50728820676589}}

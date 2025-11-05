@@ -1,0 +1,170 @@
+services:
+  sfl01:
+    image: cldjunior/fot_federated:1.2
+    container_name: sfl01
+    command: ["bash", "start_server.sh"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.3
+    mem_limit: 4g
+    cpus: 1.5
+
+  g01:
+    image: cldjunior/fot_federated:1.2
+    container_name: g01
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.4
+    mem_limit: 512m
+    cpus: 0.5
+
+  g03:
+    image: cldjunior/fot_federated:1.2
+    container_name: g03
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.6
+    mem_limit: 512m
+    cpus: 0.5
+
+  sc01:
+    image: cldjunior/fot_federated:1.2
+    container_name: sc01
+    command: ["bash", "start_fl.sh", "sc01"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.10
+    mem_limit: 512m
+    cpus: 0.3
+
+  sc02:
+    image: cldjunior/fot_federated:1.2
+    container_name: sc02
+    command: ["bash", "start_fl.sh", "sc02"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.11
+    mem_limit: 512m
+    cpus: 0.3
+
+  sc03:
+    image: cldjunior/fot_federated:1.2
+    container_name: sc03
+    command: ["bash", "start_fl.sh", "sc03"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.12
+    mem_limit: 512m
+    cpus: 0.3
+
+  sc04:
+    image: cldjunior/fot_federated:1.2
+    container_name: sc04
+    command: ["bash", "start_fl.sh", "sc04"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.13
+    mem_limit: 512m
+    cpus: 0.3
+
+  sc05:
+    image: cldjunior/fot_federated:1.2
+    container_name: sc05
+    command: ["bash", "start_fl.sh", "sc05"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.14
+    mem_limit: 512m
+    cpus: 0.3
+  sc06:
+    image: cldjunior/fot_federated:1.2
+    container_name: sc06
+    command: ["bash", "start_fl.sh", "sc06"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.15
+    mem_limit: 512m
+    cpus: 0.3
+
+  sc07:
+    image: cldjunior/fot_federated:1.2
+    container_name: sc07
+    command: ["bash", "start_fl.sh", "sc07"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.16
+    mem_limit: 512m
+    cpus: 0.3
+
+  sc08:
+    image: cldjunior/fot_federated:1.2
+    container_name: sc08
+    command: ["bash", "start_fl.sh", "sc08"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.17
+    mem_limit: 512m
+    cpus: 0.3
+
+  sc09:
+    image: cldjunior/fot_federated:1.2
+    container_name: sc09
+    command: ["bash", "start_fl.sh", "sc09"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.18
+    mem_limit: 512m
+    cpus: 0.3
+
+  sc10:
+    image: cldjunior/fot_federated:1.2
+    container_name: sc10
+    command: ["bash", "start_fl.sh", "sc10"]
+    volumes:
+      - ./:/fot_federated
+    working_dir: /fot_federated
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.19
+    mem_limit: 512m
+    cpus: 0.3
+networks:
+  fot-net:
+    external: true
+

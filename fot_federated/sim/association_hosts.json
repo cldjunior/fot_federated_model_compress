@@ -1,0 +1,15 @@
+{"name": "sc01", "ip": "10.0.0.1", "type": "humiditySensor",               "device": "172.27.27.10", "nome_device": "dc01", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc02", "ip": "10.0.0.2", "type": "environmentTemperatureSensor", "device": "172.27.27.10", "nome_device": "dc01", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc03", "ip": "10.0.0.3", "type": "bodyTemperatureSensor",        "device": "172.27.27.10", "nome_device": "dc01", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc04", "ip": "10.0.0.4", "type": "ecgmonitor",                   "device": "172.27.27.11", "nome_device": "dc02", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc05", "ip": "10.0.0.5", "type": "glucometerSensor",             "device": "172.27.27.11", "nome_device": "dc02", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc06", "ip": "10.0.0.6", "type": "oxymeterSensor",               "device": "172.27.27.11", "nome_device": "dc02", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc07", "ip": "10.0.0.7", "type": "bloodPressureSensor",          "device": "172.27.27.12", "nome_device": "dc03", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc08", "ip": "10.0.0.8", "type": "smokeSensor",                  "device": "172.27.27.12", "nome_device": "dc03", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc09", "ip": "10.0.0.9", "type": "humiditySensor",               "device": "172.27.27.12", "nome_device": "dc03", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc10", "ip": "10.0.0.10", "type": "environmentTemperatureSensor","device": "172.27.27.13", "nome_device": "dc04", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc11", "ip": "10.0.0.11", "type": "bodyTemperatureSensor",       "device": "172.27.27.13", "nome_device": "dc04", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc12", "ip": "10.0.0.12", "type": "ecgmonitor",                  "device": "172.27.27.13", "nome_device": "dc04", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc13", "ip": "10.0.0.13", "type": "glucometerSensor",            "device": "172.27.27.14", "nome_device": "dc05", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc14", "ip": "10.0.0.14", "type": "oxymeterSensor",              "device": "172.27.27.14", "nome_device": "dc05", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}
+{"name": "sc15", "ip": "10.0.0.15", "type": "bloodPressureSensor",         "device": "172.27.27.14", "nome_device": "dc05", "gateway": "172.27.27.4", "name_gateway": "h16", "collect": 30000, "publish": 30000}

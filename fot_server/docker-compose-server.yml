@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  fot_server:
+    build: .
+    container_name: fot_server
+    volumes:
+      - .:/app
+    working_dir: /app
+    hostname: fot_server
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.10
+    ports:
+      - "8080:8080"
+    environment:
+      - TZ=America/Bahia
+    stdin_open: true
+    tty: true
+    entrypoint: bash -c "sleep 5 && python3 server.py"
+
+networks:
+  fot-net:
+    external: true
+

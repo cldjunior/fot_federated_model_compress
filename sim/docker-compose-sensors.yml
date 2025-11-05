@@ -1,0 +1,44 @@
+
+
+services:
+  sensors_compress:
+    image: cldjunior/fot-fed:1.5
+    build:
+      context: .          
+      dockerfile: Dockerfile
+    container_name: sensors_compress
+
+    # executa o script principal (agora dentro de sim/)
+    command: ["bash", "inicializa_mininet.sh"]
+
+    volumes:
+      - ./:/fot_sensors/sim          # monta a pasta sim/ no mesmo caminho interno
+      - /lib/modules:/lib/modules
+    working_dir: /fot_sensors/sim
+
+    env_file:
+       - ./local_docker.env
+    environment:
+      - PASTA_LOGS=/fot_sensors/sim    #/logs
+
+    privileged: true
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+      - SYS_MODULE
+
+    networks:
+      fot-net:
+        ipv4_address: 172.27.27.3
+        aliases:
+          - fot_sensor_compress
+
+    mem_limit: 2g
+    cpus: 0.5
+
+networks:
+  fot-net:
+    name: fot-net
+    external: true
+
+

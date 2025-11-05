@@ -1,0 +1,14 @@
+# Remove containers antigos (se existirem)
+docker rm -f g01_gateway g03_gateway
+
+# Remove imagem antiga se quiser
+docker rmi cldjunior/fot_gateway:1.0
+
+# Criar uma nova imagem
+docker build -t cldjunior/fot_gateway:1.1 .
+
+# Builda novamente a imagem com o nome definido
+docker-compose -f docker-compose-gateway.yml build
+
+# Sobe os novos containers
+docker-compose -f docker-compose-gateway.yml up -d
