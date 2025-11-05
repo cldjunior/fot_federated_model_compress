@@ -27,18 +27,22 @@ services:
       - SYS_ADMIN
       - SYS_MODULE
 
-    networks:
-      fot-net:
-        ipv4_address: 172.27.27.3
-        aliases:
-          - fot_sensor_compress
+    #networks:
+    #  fot-net:
+    #    ipv4_address: 172.27.27.3
+    #    aliases:
+    #      - fot_sensor_compress
 
     mem_limit: 2g
     cpus: 0.5
 
-networks:
-  fot-net:
-    name: fot-net
-    external: true
+#networks:
+#  fot-net:
+#    name: fot-net
+#    external: true
+
+
+
+
 
 

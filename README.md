@@ -2,9 +2,10 @@
 
 This repository contains the full structure of a simulated federated learning system using Docker, divided into three main components:
 
-- **`fot-federated-simulator/`**: acts as a sensor simulator and data generator.
+- **`sim/`**: acts as a sensor simulator and data generator.
 - **`fot_gateway/`**: acts as a gateway and FL coordination server, including MQTT support.
 - **`fot_federated/`**: represents the clients/sensors that train models locally.
+- **`fot_server/`**: represents the servers.
 
 ---
 
@@ -18,7 +19,7 @@ This project simulates a Federated Learning (FL) environment with multiple senso
 
 ## Device Structure
 
-- **Sensors**: 3 different types, replicated for each device, totaling 65 sensors.
+- **Sensors**: different types, replicated for each device, totaling 65 sensors.
 - **Devices (`dc01` a `dc05`)**: act as FL clients.
 - **Gateways (`g01`, `g03`)**: receive data from sensors and can act as FL servers.
 - **FL Server (`g01`)**: performs aggregation using Flower.
@@ -43,14 +44,14 @@ This stack enables the complete simulation of a **Federated Learning environment
 
 
 ## Container Structure
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 | Compose Group     | Container Name                 | Function                                   | Image / Version                | IP (Docker `fot-net`)      |
 |-------------------|--------------------------------|--------------------------------------------|--------------------------------|----------------------------|
 | **fot_gateway**   | g01_compress                   | Gateway + FL Server (Flower) + MQTT Broker | cldjunior/fot_gateway:1.5      | 172.27.27.4                |
 | **fot_federated** | dc01_compress – dc05_compress  | Federated Clients (local FL nodes)         | cldjunior/fot_federated:1.5    | 172.27.27.10–172.27.27.14  |
 | **sim**           | sensors_compress               | Mininet + Virtual Sensors Orchestrator     | cldjunior/fot-fed:1.5          | 172.27.27.3                |
 | *(virtual)*       | sc01–sc65                      | Virtual Sensors (Mininet hosts)            | internal Mininet nodes         | 10.0.0.1–10.0.0.65         |
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 **Notes**
 - Each container group corresponds to a separate `docker-compose` project (`fot_gateway`, `fot_federated`, and `sim`).  
 - The **gateway** (`g01_compress`) is both the **MQTT broker** and **Flower-based aggregator**.  
@@ -61,26 +62,44 @@ This stack enables the complete simulation of a **Federated Learning environment
 
 ## How to Use
 
-# Federated Learning for IoT (Dockerized)
+Prerequisites
+
+* Ubuntu 20.04  or later
+
+* [Docker Engine](https://docs.docker.com/engine/install/ubuntu/)
+
+
+* [Docker desktop (opcional)](https://docs.docker.com/desktop/install/linux-install/)
+
+
+
+
 
 > **TL;DR (Ubuntu 22.04 / 24.04)**
 
 ```bash
 # Install Docker + Compose v2 and add your user to the docker group (log out/in after this)
+
 sudo apt-get update && sudo apt-get install -y ca-certificates curl gnupg lsb-release
+
 sudo install -m 0755 -d /etc/apt/keyrings
+
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo $VERSION_CODENAME) stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
 sudo apt-get update
+
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
 sudo usermod -aG docker $USER
 
+
 # Clone and enter the repository
-git clone <YOUR-REPOSITORY>.git
-cd <YOUR-REPOSITORY>
+git clone https://github.com/cldjunior/fot_federated_model_compress.git
+cd fot_federated_model_compress
 
 You can either run pre-built images (recommended for class) or build them locally (for development and customization).
 
@@ -94,6 +113,9 @@ docker compose -f sim/docker-compose-sensors.yml up -d
 
 # Federated Clients
 docker compose -f fot_federated/docker-compose-federated.yml up -d
+
+
+
 
 The Docker engine will automatically pull the following images:
 
@@ -130,7 +152,7 @@ cd ..
 
 # Sensors + Mininet
 cd sim
-docker build -t cldjunior/fot-fed:1.5 -f devops/Dockerfile .
+docker build -t cldjunior/fot-fed:1.5 -f Dockerfile .
 cd ..
 
 

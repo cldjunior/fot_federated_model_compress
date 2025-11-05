@@ -8,10 +8,6 @@ sudo python2 sim.py
 
 Descricao dos arquivos:
 
--user.json
-	-Contém a lista de usuários do sistema. Esses dados deverão ser enviados pela aplicação.
-	*id representa uma identificação única
-
 -data_hosts.json
 	-Arquivo com informações no formato json dos hosts que irão compor a rede
 -association_hosts.json
@@ -39,5 +35,3 @@ Descricao dos arquivos:
 
 Abrir terminal do host no CLI: xterm h1
 Nome do browser: midori​
-
-- os sensores de cada usuário publicam no mesmo gateway
